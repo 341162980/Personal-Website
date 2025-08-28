@@ -1,0 +1,568 @@
+/*Navbar section*/
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Balsamiq Sans', sans-serif;
+}
+
+.navbar{
+    background: linear-gradient(to bottom, #2207f1db, #e80707c5);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 1.2rem;
+    position: sticky;
+    top:0;
+    z-index: 999;
+}
+
+.navbar__container{
+display:flex;
+justify-content: space-between;
+height: 80px;
+z-index: 1;
+width: 100%;
+max-width: 1300px;
+margin: 0 auto;
+padding: 0 50px;
+}
+
+#navbar__logo {         /*alters logo */
+background-color: #f11809;
+background-image: linear-gradient(to top, #e0f409 20%, #e80707 75%);
+background-size: 100%;
+-webkit-background-clip: text;
+-moz-background-clip: text;
+-webkit-text-fill-color:transparent;
+-moz-text-fill-color: transparent;
+display: flex;
+align-items: center;
+cursor: pointer;
+text-decoration: none;
+font-size: 2rem;
+}
+
+#navbar__logo:hover {         /*logo hover effect */
+background-color: #f11809;
+background-image: linear-gradient(to top, #f7e51b 40%, #ef6a17 55%);
+background-size: 100%;
+-webkit-background-clip: text;
+-moz-background-clip: text;
+-webkit-text-fill-color:transparent;
+-moz-text-fill-color: transparent;
+display: flex;
+align-items: center;
+cursor: pointer;
+text-decoration: none;
+font-size: 2rem;
+scale: 110%;
+}
+
+.fa-jedi{
+margin-right: 0.5rem;
+}
+
+.navbar__menu{
+display:flex;
+align-items:center;
+list-style: none;
+text-align: center;
+}
+
+.navbar__item{
+height: 80px;
+white-space: nowrap;
+margin-top: 10px;
+margin-right: 30px;
+font-size: 1.5rem;
+font-weight:bolder;
+}
+
+.navbar__links{     /*alters color of options in menu*/
+color: #ffffff;
+display: flex;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+padding: 0.5rem 2rem;
+height: 100%;
+transition: all 0.3 ease;
+}
+
+
+.navbar__links:hover{
+color: #a9c7ca;
+scale: 1.1;
+}
+
+@media screen and (max-width: 960px){
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0;
+}
+
+.navbar__menu {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: -1000px;
+    opacity: 0; 
+    transition: all 0.5s ease;
+    height: 50vh;
+    z-index: -1;
+    background-color: #f11809;
+    background-image: linear-gradient(to top, #f7e51b 0%, #da4509 55%);
+}
+
+.navbar__menu.active {
+    background-color: #f11809;
+    background-image: linear-gradient(to top, #f7e51b 0%, #da4509 55%);
+    top: 100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 99;
+    height: 80vh;
+    font-size: 1.6rem;
+}
+
+#navbar__logo{
+    padding-left: 25px;
+}
+
+.navbar__toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3 ease-in-out;
+    background: #fff;
+}
+
+.navbar__item {
+    width: 100%;
+}
+
+.navbar__links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+}
+
+#mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+}
+
+.navbar__btn {
+    padding-bottom: 2rem;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 55px;
+    margin: 0;
+}
+
+.navbar__toggle .bar {
+    display: block;
+    cursor: pointer;
+}
+
+#mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+}
+
+/* Main page(hero) section */
+.main {
+    background: linear-gradient(to bottom, #ec362c 10%, #e8eb39 110%);
+    z-index: 2;
+    position: relative; /* Needed for absolute children like .sun_img */
+    overflow: hidden;   /* Hide overflow if you don't want sun to spill out */
+}
+
+.sun_img--container {
+    position: absolute; /* Make the container positionable */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Let clicks pass through the sun if needed */
+    z-index: 0; /* Behind content */
+}
+
+.sun_img {
+    position: absolute;
+    top: 400px; /* Tune this to place the sun */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 500px;
+    opacity: 0.9;
+    z-index: 0; /* Behind main content */
+}
+
+.main__img--container {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    height: 20vh;            /* Full viewport height */
+    
+}
+
+#main__img {
+    height: 500px;
+    margin: 0px;
+    scale: 0.6;
+    position: absolute;
+    top: -80px;
+    right: -100px;
+}
+
+
+
+.main__container {
+display: grid;
+grid-template-columns: 4fr 1fr;
+align-items:start;
+justify-self: center;
+margin: 0 auto;
+height: 90vh;
+background: linear-gradient(to bottom, #ec362c 10%, #e8eb39 110%); 
+z-index: 1;
+width: 100%;
+max-width: 1300px;
+padding: 0 30px;
+}
+
+.main__content h2 {  /*edits 3rd heading "Technology"*/
+font-size: 3rem;
+background-color: #ffffff;
+background-size: 100%;
+-webkit-background-clip: text;
+-moz-background-clip: text;
+-webkit-text-fill-color: transparent;
+-moz-text-fill-color: transparent;
+margin-top: 2rem;
+margin-left: 5rem;
+}
+
+.main__container p { /*text for paragraph*/
+background-color: #fcfcfc;
+background-size: 100%;
+-webkit-background-clip: text;
+-moz-background-clip: text;
+-webkit-text-fill-color: transparent;
+-moz-text-fill-color: transparent;
+font-size: 1.5rem;
+font-weight: 700;
+margin-left: 4rem;
+margin-right: 4rem;
+float: left;
+}
+
+
+.work__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+} 
+
+.work__card {
+    margin: 1rem;
+    height: 350px;
+    width: 250px;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden; /* This is key */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+    color: #000;
+    border: 1rem solid #8eb1f2;
+    z-index: 1;
+}
+
+.work__card:nth-child(2) {
+    border: 1rem solid #f3a2a2;
+}
+
+.work__card:nth-child(3) {
+    border: 1rem solid #97e69a;
+}
+
+.work__card:nth-child(4) {
+    border: 1rem solid #efe7a0;
+}
+
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.4s ease;
+}
+
+.card-front {
+    background-color: #f0f0f0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-text {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+}
+
+.card-text1 {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+}
+
+.card-text h3 {
+    margin: 0;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.card-date {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #fcf9f9;
+}
+
+.card-back {
+    background-color: #dfefff;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.card-back ppp {
+    font-size: 0.85rem;
+    color: #054e89; 
+    text-align: left;
+}
+
+.card-back ppp3 {
+    font-size:0.85rem;
+    color: #054e89; 
+}
+
+.work__card:hover .card-front {
+    transform: translateY(-100%);
+}
+
+.card-front.with-image1 {
+    background-image: url('images/skilz.jpg');
+    background-size: 350%;  
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.card-front.with-image2 {
+    background-image: url('images/achieve.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.card-front.with-image3 {
+    background-image: url('images/language.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+/*MOBILE RESPONSIVE PARTS*/
+
+@media screen and (max-width: 768px) {
+.main__container {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.main__content {                    /*Centers headers*/
+    text-align: start;
+    margin-bottom: 2 rem;
+    margin-top: 0;
+}
+}
+
+/*FOOTER*/
+
+.footer__container {
+background-color: #059f1c;
+padding: 2rem 2rem; /* reduce padding if too tall */
+display: flex;
+flex-direction: column;
+justify-content: flex-end;  /* push content to the bottom */
+align-items: center;    /* align to the left */
+height: 200px;          
+position: relative;
+z-index: 2;    
+}
+
+
+#footer__logo {
+background-color: #f11809;
+background-image: linear-gradient(to top, #e0f409a2 5%, #e80707a0 75%);
+background-size: 100%;
+-webkit-background-clip: text;
+-moz-background-clip: text;
+-webkit-text-fill-color:transparent;
+-moz-text-fill-color: transparent;
+display: flex;
+align-items: center;
+cursor: pointer;
+text-decoration: none;
+font-size: 2rem;
+}
+
+#footer__logo:hover {         /*affects the "NEXT" in footer*/
+background-color: #f11809;
+background-image: linear-gradient(to top, #e0f409a2 20%, #e80707c5 55%);
+background-size: 100%;
+-webkit-background-clip: text;
+-moz-background-clip: text;
+-webkit-text-fill-color:transparent;
+-moz-text-fill-color: transparent;
+display: flex;
+align-items: center;
+cursor: pointer;
+text-decoration: none;
+font-size: 2rem;
+}
+
+
+.footer__links {            /*Next 2 methods: puts the footers in 1 by 4 formation*/
+width: 100%;
+max-width: 1000px;
+display: flex;
+justify-content: center;
+}
+
+.footer__link--wrapper {
+display: flex;
+}
+
+/*Social Icons*/
+.social__icon--link {       /*edits social media icons*/
+color: #125b04 ;
+font-size: 24px;
+}
+
+.social__media {        /*moves bottom logo, rights and icons left*/
+max-width: 1000px;
+width: 100%
+}
+
+.social__media--wrap {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+width: 100%;
+gap: 10rem; /* optional: adds space between elements */
+margin-top: auto; /* pushes it to bottom if container grows */
+}
+
+
+.social__icons {        /*spaces out bottom stuff evenly*/
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 150px;
+}
+
+.social__logo {     /*edits logo in footer*/
+color: #125b04;
+justify-self: flex-start;
+margin-left: 20px;
+cursor:pointer;
+text-decoration: none;
+font-size: 2rem;
+display: flex;
+align-items: center;
+margin-bottom: 16px;
+}
+
+.website__rights {      /*edits rights in footer*/
+color: #125b04;
+}
+
+@media screen and (max-width: 820px) {
+.footer__links {
+    padding-top: 2rem;
+}
+
+#footer__logo {
+    margin-bottom: 2rem;
+}
+
+.website__rights {
+    margin-bottom: 2rem;
+}
+
+.footer__link--wrapper {
+    flex-direction: column;
+}
+
+.social__media--wrap {
+    flex-direction: column;
+}
+}
+
+@media screen and (max-width: 480px) {
+.footer__link--items {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+}
+}

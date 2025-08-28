@@ -1,0 +1,9 @@
+This project folder features my personal portfolio website containing
+my past work experiences, projects and contact information. 
+
+To access it, check out the "Web1" folder and right click any of the html 
+files in a Visual Studio code environment. Preferably right click the 
+"home.html" file since that's the home page although it's accessible from 
+all other pages on the website. After right clicking, you'll see the option 
+to "Open with Live Server". Click this and it will open up my personal website
+in your browser. 

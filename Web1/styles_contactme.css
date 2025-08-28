@@ -1,0 +1,470 @@
+/*Navbar section*/
+*{
+    box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Balsamiq Sans', sans-serif;
+}
+
+.navbar{
+    background: #94e6ef;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 1.2rem;
+    position: sticky;
+    top:0;
+    z-index: 999;
+}
+
+.sun_img--container {
+text-align: center; 
+padding-top: 50px;
+}
+
+.sun_img {
+position: absolute;
+top: -375px;
+left: -80px;
+width: 500px;
+opacity: 0.9;
+}
+
+.navbar__container{
+display:flex;
+justify-content: space-between;
+height: 80px;
+z-index: 1;
+width: 100%;
+max-width: 1300px;
+margin: 0 auto;
+padding: 0 50px;
+}
+
+#navbar__logo {         /*alters logo */
+background-color: #f11809;
+background-image: linear-gradient(to top, #e0f409 20%, #e80707 75%);
+background-size: 100%;
+-webkit-background-clip: text;
+-moz-background-clip: text;
+-webkit-text-fill-color:transparent;
+-moz-text-fill-color: transparent;
+display: flex;
+align-items: center;
+cursor: pointer;
+text-decoration: none;
+font-size: 2rem;
+}
+
+#navbar__logo:hover {         /*logo hover effect */
+background-color: #f11809;
+background-image: linear-gradient(to top, #f7e51b 40%, #ef6a17 55%);
+background-size: 100%;
+-webkit-background-clip: text;
+-moz-background-clip: text;
+-webkit-text-fill-color:transparent;
+-moz-text-fill-color: transparent;
+display: flex;
+align-items: center;
+cursor: pointer;
+text-decoration: none;
+font-size: 2rem;
+scale: 110%;
+}
+
+.fa-jedi{
+margin-right: 0.5rem;
+}
+
+.navbar__menu{
+display:flex;
+align-items:center;
+list-style: none;
+text-align: center;
+}
+
+.navbar__item{
+height: 80px;
+white-space: nowrap;
+margin-top: 10px;
+margin-right: 30px;
+font-size: 1.5rem;
+font-weight:bolder;
+}
+
+.navbar__links{     /*alters color of options in menu*/
+color: #ffffff;
+display: flex;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+padding: 0.5rem 2rem;
+height: 100%;
+transition: all 0.3 ease;
+}
+
+
+.navbar__links:hover{
+color: #a9c7ca;
+scale: 1.1;
+}
+
+@media screen and (max-width: 960px){
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0;
+}
+
+.navbar__menu {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 0;
+    width: 100%;
+    position: absolute;
+    top: -1000px;
+    opacity: 0; 
+    transition: all 0.5s ease;
+    height: 50vh;
+    z-index: -1;
+    background: #94e6ef;
+}
+
+.navbar__menu.active {
+    background: #94e6ef;
+    top: 100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 99;
+    height: 80vh;
+    font-size: 1.6rem;
+}
+
+#navbar__logo{
+    padding-left: 25px;
+}
+
+.navbar__toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3 ease-in-out;
+    background: #fff;
+}
+
+.navbar__item {
+    width: 100%;
+}
+
+.navbar__links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+}
+
+#mobile-menu {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    transform: translate(5%, 20%);
+}
+
+.navbar__btn {
+    padding-bottom: 2rem;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 55px;
+    margin: 0;
+}
+
+.navbar__toggle .bar {
+    display: block;
+    cursor: pointer;
+}
+
+#mobile-menu.is-active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+#mobile-menu.is-active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#mobile-menu.is-active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+}
+
+/* Main page(hero) section */
+.main {
+background-color: #a4ebf1;       /*main background color*/
+z-index: 2;
+}
+
+.main__container {
+display: grid;
+grid-template-columns: 1.5fr 1fr;
+align-items:center;
+justify-self: center;
+margin: 0 auto;
+height: 90vh;
+background-color: #a4ebf1;
+z-index: 1;
+width: 100%;
+max-width: 1300px;
+padding: 0 50px;
+}
+
+.main__content h2 {  /*edits 3rd heading "Technology"*/
+font-size: 3.5rem;
+background-color: #1ae207;
+background-image: linear-gradient(to bottom, #054297 5%, #4cc6f2 100%);
+background-size: 100%;
+-webkit-background-clip: text;
+-moz-background-clip: text;
+-webkit-text-fill-color: transparent;
+-moz-text-fill-color: transparent;
+}
+
+.main__container p { /*text for paragraph*/
+background-color: #1ae207;
+background-image: linear-gradient(to top, #e12bc3 0%, #4cc6f2 100%);
+background-size: 100%;
+-webkit-background-clip: text;
+-moz-background-clip: text;
+-webkit-text-fill-color: transparent;
+-moz-text-fill-color: transparent;
+margin-top: 2rem;
+font-size: 2rem;
+font-weight: 700;
+}
+
+.main__img--container {
+text-align: center;
+}
+
+
+/*edits picture size*/
+.img-wrapper {
+position: absolute;
+bottom: 200px;  /* move up by footer height */
+left: 50%;
+transform: translateX(-50%);
+height: auto;
+z-index: 2;
+}
+
+/* Tree image */
+#main__img {
+width: 70%;
+position: relative;
+z-index: 2;
+top: 300px;
+left: 400px;
+}
+
+/* Face image overlay (if needed) */
+#main__img1 {
+position: absolute;
+top: 230px;
+left: 500px;
+transform: translateX(-50%);
+scale: 0.5;
+z-index: 3;
+}
+
+/*MOBILE RESPONSIVE PARTS*/
+
+@media screen and (max-width: 768px) {
+.main__container {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-self: center;
+    width: 100%;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+.main__content {                    /*Centers headers*/
+    text-align: center;
+    margin-bottom: 4 rem;
+}
+
+.main__content h1 {                /*Size for "Next generation" header*/
+    font-size: 2.5rem;
+    margin-top: 2rem;
+}
+
+.main__content h2 {         /*Size for "Technology" header*/
+    font-size: 1.5rem;    
+}
+
+.main__content p {          /*Size for text below headers*/
+    margin-top: 0.75rem;
+    font-size: 1.5rem;
+}
+
+}
+
+@media screen and (max-width: 480px){
+.main__content h1 {                /*Size for "Next generation" header*/
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+.main__content h2 {         /*Size for "Technology" header*/
+    font-size: 2rem;    
+}
+
+.main__content p {          /*Size for text below headers*/
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+.main__btn {
+    padding: 12px 36px;
+    margin: 2.5rem 0;
+}
+}
+
+/*FOOTER*/
+
+.footer__container {
+background-color: #07c223;
+padding: 2rem 2rem; /* reduce padding if too tall */
+display: flex;
+flex-direction: column;
+justify-content: flex-end;  /* push content to the bottom */
+align-items: center;    /* align to the left */
+height: 200px;          
+position: relative;
+z-index: 1;    
+}
+
+#footer__logo {
+background-color: #f11809;
+background-image: linear-gradient(to top, #e0f409 5%, #e80707 75%);
+background-size: 100%;
+-webkit-background-clip: text;
+-moz-background-clip: text;
+-webkit-text-fill-color:transparent;
+-moz-text-fill-color: transparent;
+display: flex;
+align-items: center;
+cursor: pointer;
+text-decoration: none;
+font-size: 2rem;
+}
+
+#footer__logo:hover {         /*affects the "NEXT" in footer*/
+background-color: #f11809;
+background-image: linear-gradient(to top, #f7e51b 20%, #ef6a17 55%);
+background-size: 100%;
+-webkit-background-clip: text;
+-moz-background-clip: text;
+-webkit-text-fill-color:transparent;
+-moz-text-fill-color: transparent;
+display: flex;
+align-items: center;
+cursor: pointer;
+text-decoration: none;
+font-size: 2rem;
+}
+
+
+.footer__links {            /*Next 2 methods: puts the footers in 1 by 4 formation*/
+width: 100%;
+max-width: 1000px;
+display: flex;
+justify-content: center;
+}
+
+.footer__link--wrapper {
+display: flex;
+}
+
+/*Social Icons*/
+.social__icon--link {       /*edits social media icons*/
+color: #125b04 ;
+font-size: 24px;
+}
+
+.social__media {        /*moves bottom logo, rights and icons left*/
+max-width: 1000px;
+width: 100%
+}
+
+.social__media--wrap {
+display: flex;
+justify-content: flex-start;
+align-items: center;
+width: 100%;
+gap: 10rem; /* optional: adds space between elements */
+margin-top: auto; /* pushes it to bottom if container grows */
+}
+
+
+.social__icons {        /*spaces out bottom stuff evenly*/
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 150px;
+}
+
+.social__logo {     /*edits logo in footer*/
+color: #125b04;
+justify-self: flex-start;
+margin-left: 20px;
+cursor:pointer;
+text-decoration: none;
+font-size: 2rem;
+display: flex;
+align-items: center;
+margin-bottom: 16px;
+}
+
+.website__rights {      /*edits rights in footer*/
+color: #125b04;
+}
+
+@media screen and (max-width: 820px) {
+.footer__links {
+    padding-top: 2rem;
+}
+
+#footer__logo {
+    margin-bottom: 2rem;
+}
+
+.website__rights {
+    margin-bottom: 2rem;
+}
+
+.footer__link--wrapper {
+    flex-direction: column;
+}
+
+.social__media--wrap {
+    flex-direction: column;
+}
+}
+
+@media screen and (max-width: 480px) {
+.footer__link--items {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+}
+}
